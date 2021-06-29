@@ -32,6 +32,8 @@ config(passport)
 // Routes
 app.use('/api/users', usersRoutes)
 
+const __dirname = path.resolve()
+
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '/client/build')))
 
